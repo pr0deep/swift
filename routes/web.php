@@ -15,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('',function ()
 {
-    dd("BACKEND");
-    return response()->json(['message' , 'lol']);
+    return [1,2,3];
 });
