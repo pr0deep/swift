@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Shops;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,5 @@ Route::middleware('auth:api')->group(function () {
 // show all available shops...
 Route::get('shops' , function (Request $request)
 {
-
+    return Shops::all();
 });
