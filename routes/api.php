@@ -26,7 +26,10 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 Route::middleware('auth:api')->group(function () {
     Route::post('logout', [AuthController::class , 'logout'])->name('logout.api');
+    // user details ...
+    Route::get('user',[AuthController::class , 'user'])->name('user.api');
 });
+
 
 // show all available shops...
 Route::get('shops' , function (Request $request)
