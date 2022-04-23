@@ -19,7 +19,7 @@ use App\Models\Shops;
 Route::group(['middleware' => ['cors', 'json.response']], function () {
     // public routes
     Route::get('/',function (Request $request) {
-        return reponse()->json(['message' , 'lol']);
+        return (['Welcome to API']);
     });
     Route::post('login', [AuthController::class , 'login'])->name('login.api');
     Route::post('register', [AuthController::class , 'register'])->name('register.api');
